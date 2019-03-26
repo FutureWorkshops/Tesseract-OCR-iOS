@@ -163,7 +163,9 @@ namespace tesseract {
         _configDictionary = configDictionary;
         _configFileNames = configFileNames;
         
-        setenv("TESSDATA_PREFIX", [_absoluteDataPath stringByAppendingString:@"/"].fileSystemRepresentation, 1);
+        if (_absoluteDataPath != nil) {
+            setenv("TESSDATA_PREFIX", [_absoluteDataPath stringByAppendingString:@"/"].fileSystemRepresentation, 1);
+        }
 
     }
     return self;

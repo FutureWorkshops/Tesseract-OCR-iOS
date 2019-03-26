@@ -116,11 +116,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
-        
+        guard let image = info[.originalImage] as? UIImage else { return }
         self.recognizeImageWithTesseract(image: image)
     }
 }
