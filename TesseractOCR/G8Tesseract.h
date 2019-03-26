@@ -11,6 +11,8 @@
 #import "G8Constants.h"
 #import "G8TesseractDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Default value of `sourceResolution` property.
  */
@@ -430,3 +432,5 @@ extern NSInteger const kG8MaxCredibleResolution;
 - (BOOL)recognize;
     
     @end
+
+NS_ASSUME_NONNULL_END

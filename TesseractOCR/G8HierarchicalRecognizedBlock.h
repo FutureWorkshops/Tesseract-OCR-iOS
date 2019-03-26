@@ -8,6 +8,8 @@
 
 #import <TesseractOCR/TesseractOCR.h>
 
+#ifndef TESSERACT_G8HierarchicalRecognizedBlock
+#define TESSERACT_G8HierarchicalRecognizedBlock
 @interface G8HierarchicalRecognizedBlock : G8RecognizedBlock
 
 /**
@@ -55,3 +57,4 @@
 - (instancetype)initWithBlock:(G8RecognizedBlock *)block;
 
 @end
+#endif
