@@ -297,7 +297,7 @@ extern NSInteger const kG8MaxCredibleResolution;
      *          you have specified. Also you may ensure that Tesseract is properly
      *          initialized by checking `isEngineConfigured` property.
      */
-- (nullable instancetype)initWithLanguage:(nonnull NSString*)language;
+- (instancetype)initWithLanguage:(nonnull NSString*)language;
     
     /**
      *  Initialize Tesseract with the provided language and engine mode.
@@ -311,8 +311,8 @@ extern NSInteger const kG8MaxCredibleResolution;
      *          you have specified. Also you may ensure that Tesseract is properly
      *          initialized by checking `isEngineConfigured` property.
      */
-- (nullable instancetype)initWithLanguage:(nonnull NSString*)language
-                                engineMode:(G8OCREngineMode)engineMode;
+- (instancetype)initWithLanguage:(nonnull NSString*)language
+                      engineMode:(G8OCREngineMode)engineMode;
     
     /**
      *  Initialize Tesseract with the provided language and engine mode.
@@ -344,11 +344,11 @@ extern NSInteger const kG8MaxCredibleResolution;
      *          initialized by checking `isEngineConfigured` property.
      */
     
-- (nullable instancetype)initWithLanguage:(nonnull NSString *)language
-                           configDictionary:(nonnull NSDictionary *)configDictionary
-                            configFileNames:(nonnull NSArray *)configFileNames
-                      cachesRelatedDataPath:(nonnull NSString *)cachesRelatedDataPath
-                                 engineMode:(G8OCREngineMode)engineMode;
+- (instancetype)initWithLanguage:(nonnull NSString *)language
+                configDictionary:(nonnull NSDictionary *)configDictionary
+                 configFileNames:(nonnull NSArray *)configFileNames
+           cachesRelatedDataPath:(nonnull NSString *)cachesRelatedDataPath
+                      engineMode:(G8OCREngineMode)engineMode;
     
     /**
      *  Initialize Tesseract with the provided language and engine mode.
@@ -387,11 +387,11 @@ extern NSInteger const kG8MaxCredibleResolution;
      *          you have specified. Also you may ensure that Tesseract is properly
      *          initialized by checking `isEngineConfigured` property.
      */
-- (nullable instancetype)initWithLanguage:(nonnull NSString *)language
-                          configDictionary:(nonnull NSDictionary *)configDictionary
-                           configFileNames:(nonnull NSArray *)configFileNames
-                          absoluteDataPath:(nonnull NSString *)absoluteDataPath
-                                engineMode:(G8OCREngineMode)engineMode;
+- (instancetype)initWithLanguage:(nonnull NSString *)language
+                configDictionary:(nonnull NSDictionary *)configDictionary
+                 configFileNames:(nonnull NSArray *)configFileNames
+                absoluteDataPath:(nonnull NSString *)absoluteDataPath
+                      engineMode:(G8OCREngineMode)engineMode;
     
     /**
      *  Set a Tesseract variable. See G8TesseractParameters.h for the available
